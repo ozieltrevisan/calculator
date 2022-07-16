@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="calculator.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+         
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="15"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="Resultado" Text="0" FontSize="52" HorizontalTextAlignment="End" BackgroundColor="White" VerticalTextAlignment="Center" LineBreakMode="NoWrap" Grid.ColumnSpan="4" Grid.Row="0"/>
+        <BoxView Color="#424242" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="4"/>
+        <BoxView Color="#424242" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="5"/>
+        <BoxView Color="#1de8b5" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="3" Grid.RowSpan="4"/>
+        <BoxView Color="#1de8b5" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="3" Grid.RowSpan="5"/>
+        <BoxView Color="#626262" Grid.Row="1" Grid.RowSpan="4" Grid.Column="3"/>
+        <BoxView Color="#626262" Grid.Row="1" Grid.RowSpan="5" Grid.Column="3"/>
+
+
+
+        <Button Text="%" FontSize="36" WidthRequest="100" HeightRequest="100" CornerRadius="50"  Clicked="NumeroClicado" VerticalOptions="Center" BackgroundColor="#424242" TextColor="White" Grid.Row="1" Grid.Column="0"/>
+        <Button Text="(" FontSize="36" WidthRequest="100" HeightRequest="100" CornerRadius="50"  Clicked="NumeroClicado" VerticalOptions="Center" BackgroundColor="#424242" TextColor="White" Grid.Row="1" Grid.Column="1"/>
+        <Button Text=")" FontSize="36" WidthRequest="100" HeightRequest="100" CornerRadius="50"  Clicked="NumeroClicado" VerticalOptions="Center" BackgroundColor="#424242" TextColor="White" Grid.Row="1" Grid.Column="2"/>
+        <Button Text="7" FontSize="36" WidthRequest="100" HeightRequest="100" CornerRadius="50"  Clicked="NumeroClicado" VerticalOptions="Center" BackgroundColor="#424242" TextColor="White" Grid.Row="2" Grid.Column="0"/>
+        <Button Text="8" FontSize="36" WidthRequest="100" HeightRequest="100" CornerRadius="50"  Clicked="NumeroClicado" VerticalOptions="Center" BackgroundColor="#424242" TextColor="White" Grid.Row="2" Grid.Column="1"/>
+        <Button Text="9" FontSize="36" WidthRequest="100" HeightRequest="100" CornerRadius="50"  Clicked="NumeroClicado" VerticalOptions="Center" BackgroundColor="#424242" TextColor="White" Grid.Row="2" Grid.Column="2"/>
+        <Button Text="4" FontSize="36" WidthRequest="100" HeightRequest="100" CornerRadius="50"  Clicked="NumeroClicado" VerticalOptions="Center" BackgroundColor="#424242" TextColor="White" Grid.Row="3" Grid.Column="0"/>
+        <Button Text="5" FontSize="36" WidthRequest="100" HeightRequest="100" CornerRadius="50"  Clicked="NumeroClicado" VerticalOptions="Center" BackgroundColor="#424242" TextColor="White" Grid.Row="3" Grid.Column="1"/>
+        <Button Text="6" FontSize="36" WidthRequest="100" HeightRequest="100" CornerRadius="50"  Clicked="NumeroClicado" VerticalOptions="Center" BackgroundColor="#424242" TextColor="White" Grid.Row="3" Grid.Column="2"/>
+        <Button Text="1" FontSize="36" WidthRequest="100" HeightRequest="100" CornerRadius="50"  Clicked="NumeroClicado" VerticalOptions="Center" BackgroundColor="#424242" TextColor="White" Grid.Row="4" Grid.Column="0"/>
+        <Button Text="2" FontSize="36" WidthRequest="100" HeightRequest="100" CornerRadius="50"  Clicked="NumeroClicado" VerticalOptions="Center" BackgroundColor="#424242" TextColor="White" Grid.Row="4" Grid.Column="1"/>
+        <Button Text="3" FontSize="36" WidthRequest="100" HeightRequest="100" CornerRadius="50"  Clicked="NumeroClicado" VerticalOptions="Center" BackgroundColor="#424242" TextColor="White" Grid.Row="4" Grid.Column="2"/>
+        <Button Text="0" FontSize="36" WidthRequest="100" HeightRequest="100" CornerRadius="50"  Clicked="NumeroClicado" VerticalOptions="Center" BackgroundColor="#424242" TextColor="White" Grid.Row="5" Grid.Column="0"/>
+        <Button Text="." FontSize="36" WidthRequest="100" HeightRequest="100" CornerRadius="50"  Clicked="NumeroClicado" VerticalOptions="Center" BackgroundColor="#424242" TextColor="White" Grid.Row="5" Grid.Column="1"/>
+        <Button Text="=" FontSize="36" WidthRequest="100" HeightRequest="100" CornerRadius="50" Clicked="Calcular" VerticalOptions="Center" BackgroundColor="#424242" TextColor="White" Grid.Row="5" Grid.Column="2"/>
+        <Grid Grid.Row="1" Grid.Column="3" Grid.RowSpan="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+                    <Button Text="c" FontSize="36" WidthRequest="100" HeightRequest="100" CornerRadius="50" Clicked="clear" VerticalOptions="Center" BackgroundColor="#626262" TextColor="White" Grid.Row="0" Grid.Column="0"/>
+                    <Button Text="/" FontSize="36" WidthRequest="100" HeightRequest="100" CornerRadius="50" Clicked="OperadrClicado" VerticalOptions="Center" BackgroundColor="#626262" TextColor="White" Grid.Row="1" Grid.Column="0"/>
+                    <Button Text="x" FontSize="36" WidthRequest="100" HeightRequest="100" CornerRadius="50" Clicked="OperadrClicado" VerticalOptions="Center" BackgroundColor="#626262" TextColor="White" Grid.Row="2" Grid.Column="0"/>
+                    <Button Text="+" FontSize="36" WidthRequest="100" HeightRequest="100" CornerRadius="50" Clicked="OperadrClicado" VerticalOptions="Center" BackgroundColor="#626262" TextColor="White" Grid.Row="3" Grid.Column="0"/>
+                    <Button Text="-" FontSize="36" WidthRequest="100" HeightRequest="100" CornerRadius="50" Clicked="OperadrClicado" VerticalOptions="Center" BackgroundColor="#626262" TextColor="White" Grid.Row="4" Grid.Column="0"/>
+
+
+        </Grid>
+
+    </Grid>
+
+</ContentPage>
